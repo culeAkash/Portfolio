@@ -1,0 +1,51 @@
+/* Cursor Blob CSS */
+.blob-cursor__bg {
+  --blob-size: 40rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: auto;
+  bottom: auto;
+  /* display: block; */
+  width: var(--blob-size);
+  height: var(--blob-size);
+  border-radius: 350px;
+  background-color: #131f43;
+  opacity: 1;
+  -webkit-filter: blur(120px);
+  filter: blur(120px);
+  -webkit-animation: blobAnimation 2s Linear Infinite;
+  animation: blobAnimation 2s Linear Infinite;
+}
+
+@keyframes moveCursor1 {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(0.8);
+  }
+}
+@-webkit-keyframes blobAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes blobAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
