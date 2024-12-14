@@ -1,38 +1,68 @@
 import Navbar from "./components/navbar";
 import "./App.css";
+import { useEffect, useRef } from "react";
+import { Loader2 } from "lucide-react";
+import HeroSection from "./components/sections/hero-section";
 
 const App = () => {
-  //Cursor Background Tracking
-  const tokenBgCursor = document.querySelector(".blob-cursor__bg");
-  const triggerCursor = document.querySelector(".show-cursor__bg");
-  document.addEventListener("mousemove", (e) => {
-    tokenBgCursor?.setAttribute(
-      "style",
-      "top: " + (e.pageY - 320) + "px; left: " + (e.pageX - 320) + "px;"
+  const containerRef = useRef<HTMLDivElement>(null);
+  const glowCursorRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    const glowCursor = glowCursorRef.current;
+
+    if (glowCursor && glowCursor) {
+      container?.addEventListener("mousemove", (e) => {
+        // Get container boundaries
+        const { top, left } = container.getBoundingClientRect();
+
+        // Calculate cursor position relative to the container
+        const cursorX = e.clientX - left;
+        const cursorY = e.clientY - top;
+
+        // Move the glowing effect
+        glowCursor.style.transform = `translate(${
+          cursorX - glowCursor.offsetWidth / 2
+        }px, 
+                                             ${
+                                               cursorY -
+                                               glowCursor.offsetHeight / 2
+                                             }px)`;
+      });
+      container?.addEventListener("mouseleave", () => {
+        glowCursor.style.display = "none";
+      });
+      container?.addEventListener("mouseenter", () => {
+        glowCursor.style.display = "block";
+      });
+    }
+  }, []);
+
+  if (!containerRef || !glowCursorRef) {
+    return (
+      <div className="h-[100vh] flex justify-center items-center">
+        <Loader2 className="animate-spin h-6 w-6" />
+        <div>Loading...</div>
+      </div>
     );
-  });
+  }
 
-  const cursorBg = document.querySelector(".blob-cursor__bg");
-
-  triggerCursor?.addEventListener("mouseenter", () => {
-    cursorBg?.classList.remove("hide");
-  });
-  triggerCursor?.addEventListener("mouseleave", () => {
-    cursorBg?.classList.add("hide");
-  });
   return (
-    <div className="h-[100vh]">
+    <div className="h-full">
       <div className="sticky top-0 z-50 shadow-lg ">
         <Navbar />
       </div>
-      <div className="blob-cursor__bg"></div>
-      <div className={`max-h-fit bg-[#10162B] show-cursor__bg`}>
-        <h1 className="text-3xl font-bold text-center min-h-screen text-zinc-100">
-          Hello
-        </h1>
-        <a href="https://github.com/culeAkash" className="z-50">
-          Github
-        </a>
+
+      <div
+        className="relative min-h-[100vh] overflow-hidden w-full z-10 bg-[#10162B]"
+        ref={containerRef}
+      >
+        <div
+          className="absolute w-[320px] h-[320px] bg-[#131f43] rounded-lg pointer-events-none mix-blend-screen glow-cursor opacity-50 blob-cursor__bg"
+          ref={glowCursorRef}
+        />
+        <HeroSection />
       </div>
     </div>
   );

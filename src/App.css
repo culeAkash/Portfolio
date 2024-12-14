@@ -1,16 +1,6 @@
 /* Cursor Blob CSS */
+
 .blob-cursor__bg {
-  --blob-size: 40rem;
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: auto;
-  bottom: auto;
-  /* display: block; */
-  width: var(--blob-size);
-  height: var(--blob-size);
-  border-radius: 350px;
-  background-color: #131f43;
   opacity: 1;
   -webkit-filter: blur(120px);
   filter: blur(120px);
