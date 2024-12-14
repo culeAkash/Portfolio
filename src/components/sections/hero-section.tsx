@@ -1,7 +1,7 @@
-import twitterIcon from "../../assets/twitter.svg";
-import githubIcon from "../../assets/github.svg";
-import linkedinIcon from "../../assets/linkedin.svg";
-import emailIcons from "../../assets/email.svg";
+import twitterIcon from "../../assets/socials/twitter.svg";
+import githubIcon from "../../assets/socials/github.svg";
+import linkedinIcon from "../../assets/socials/linkedin.svg";
+import emailIcons from "../../assets/socials/email.svg";
 
 const HeroSection = () => {
   return (
