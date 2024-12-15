@@ -3,6 +3,7 @@ import "./App.css";
 import { useEffect, useRef } from "react";
 import { Loader2 } from "lucide-react";
 import HeroSection from "./components/sections/hero-section";
+import AboutSection from "./components/sections/about-section";
 
 const App = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -49,11 +50,10 @@ const App = () => {
   }
 
   return (
-    <div className="h-full">
-      <div className="sticky top-0 z-50 shadow-lg ">
+    <div className="min-h-screen">
+      <div className="sticky top-0 z-50 shadow-lg h-20">
         <Navbar />
       </div>
-
       <div
         className="relative min-h-[100vh] overflow-hidden w-full z-10 bg-[#10162B]"
         ref={containerRef}
@@ -63,6 +63,7 @@ const App = () => {
           ref={glowCursorRef}
         />
         <HeroSection />
+        <AboutSection />
       </div>
     </div>
   );

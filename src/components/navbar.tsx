@@ -1,7 +1,7 @@
 import profileImg from "../assets/90236346.jpeg";
 const Navbar = () => {
   return (
-    <div className="w-full h-20 bg-[#0E1734] flex flex-row justify-center md:justify-between items-center px-6">
+    <div className="w-full h-full bg-[#0E1734] flex flex-row justify-center md:justify-between items-center px-6">
       <div className="flex flex-row gap-x-2 justify-center items-center">
         <div className="h-10 w-10 rounded-lg bg-zinc-200">
           <img src={profileImg} className="w-10 h-10" />
