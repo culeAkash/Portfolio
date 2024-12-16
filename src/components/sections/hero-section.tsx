@@ -11,13 +11,13 @@ const HeroSection = () => {
       <div className="w-full flex flex-row justify-center md:justify-between gap-x-8 py-20">
         <div className="w-full md:w-[55%] flex flex-col gap-y-4">
           <h1 className="text-xl md:text-5xl text-[#E2E9F1] uppercase font-serif">
-            Hello, I'm Akash Jaiswal
+            Hello, I'm <span className="text-[#369ea0]">Akash Jaiswal</span>
           </h1>
           <h1 className="text-md md:text-2xl text-[#E2E9F1] uppercase font-serif">
-            I'm a Full Stack Developer{" "}
+            <span className="text-[#369ea0]">Full Stack Developer </span>
           </h1>
           <p className="text-[#94A3B8] text-sm md:text-md ">
-            Hi, I'm Akash, a Software Engineer with 2 years of experience in
+            Hi, I'm Akash, a Software Engineer with 2+ years of experience in
             backend development using Java, Node.js, and Spring Boot, and
             frontend expertise in React and Next.js. I specialize in designing
             scalable microservices, crafting efficient APIs, and solving complex

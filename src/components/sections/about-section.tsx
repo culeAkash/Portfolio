@@ -3,9 +3,12 @@ import { Button } from "../ui/button";
 
 const AboutSection = () => {
   return (
-    <div className="mt-20 md:mt-20 w-full min-h-[50vh] h-fit mb-5">
+    <div
+      className="mt-20 md:mt-20 w-full min-h-[50vh] h-fit"
+      id="about-section"
+    >
       <div className="flex flex-col gap-y-2 items-center">
-        <h1 className="text-3xl font-bold text-center text-[#E2E9F1] uppercase font-mono">
+        <h1 className="text-xl md:text-3xl font-bold text-center text-[#E2E9F1] uppercase font-mono">
           <p style={{ letterSpacing: "10px" }}>
             About<span className="ml-2">Me</span>
           </p>

@@ -1,5 +1,10 @@
 import profileImg from "../assets/90236346.jpeg";
-const Navbar = () => {
+
+interface NavbarProps {
+  scrollFunc: (section: string) => void;
+}
+
+const Navbar = ({ scrollFunc }: NavbarProps) => {
   return (
     <div className="w-full h-full bg-[#0E1734] flex flex-row justify-center md:justify-between items-center px-6">
       <div className="flex flex-row gap-x-2 justify-center items-center">
@@ -12,18 +17,36 @@ const Navbar = () => {
       </div>
       <div className="hidden md:block">
         <div className="flex flex-row gap-x-8 justify-center items-center uppercase px-6 ">
-          <a href="#" className="text-white hover:text-gray-500 cursor-pointer">
+          <p
+            onClick={() => scrollFunc("home-section")}
+            className="text-white hover:text-[#369ea0] cursor-pointer"
+          >
             Home
-          </a>
-          <a href="#" className="text-white hover:text-gray-500 cursor-pointer">
+          </p>
+          <p
+            onClick={() => scrollFunc("about-section")}
+            className="text-white hover:text-[#369ea0] cursor-pointer"
+          >
             About
-          </a>
-          <a href="#" className="text-white hover:text-gray-500">
+          </p>
+          <p
+            onClick={() => scrollFunc("projects-section")}
+            className="text-white hover:text-[#369ea0] cursor-pointer"
+          >
             Projects
-          </a>
-          <a href="#" className="text-white hover:text-gray-500">
+          </p>
+          <p
+            onClick={() => scrollFunc("work-section")}
+            className="text-white hover:text-[#369ea0] cursor-pointer"
+          >
+            Work
+          </p>
+          <p
+            onClick={() => scrollFunc("contact-section")}
+            className="text-white hover:text-[#369ea0] cursor-pointer"
+          >
             Contact
-          </a>
+          </p>
         </div>
       </div>
     </div>
