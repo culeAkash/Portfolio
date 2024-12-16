@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import { Loader2 } from "lucide-react";
 import HeroSection from "./components/sections/hero-section";
 import AboutSection from "./components/sections/about-section";
+import WorkExperience from "./components/sections/work-experience-section";
 
 const App = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -62,8 +63,11 @@ const App = () => {
           className="absolute w-[320px] h-[320px] bg-[#131f43] rounded-lg pointer-events-none mix-blend-screen glow-cursor opacity-50 blob-cursor__bg"
           ref={glowCursorRef}
         />
-        <HeroSection />
-        <AboutSection />
+        <div className="px-14 md:px-28">
+          <HeroSection />
+          <AboutSection />
+          <WorkExperience />
+        </div>
       </div>
     </div>
   );

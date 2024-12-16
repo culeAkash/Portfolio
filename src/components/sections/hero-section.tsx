@@ -8,7 +8,7 @@ import "./hero-section.css";
 const HeroSection = () => {
   return (
     <div className="relative h-[90vh]">
-      <div className="w-full flex flex-row justify-center md:justify-between gap-x-8 py-20 px-28">
+      <div className="w-full flex flex-row justify-center md:justify-between gap-x-8 py-20">
         <div className="w-full md:w-[55%] flex flex-col gap-y-4">
           <h1 className="text-xl md:text-5xl text-[#E2E9F1] uppercase font-serif">
             Hello, I'm Akash Jaiswal

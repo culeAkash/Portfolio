@@ -6,13 +6,7 @@ interface SocialLinkInterface {
   hoverBoxStyles?: string;
 }
 
-const SocialLink = ({
-  href,
-  icon,
-  boxStyles,
-  hoverBoxStyles,
-  iconStyles,
-}: SocialLinkInterface) => {
+const SocialLink = ({ href, icon }: SocialLinkInterface) => {
   return (
     <div
       className="h-20 w-20 border-2 border-[#1d2d5a] flex items-center justify-center cursor-pointer"
