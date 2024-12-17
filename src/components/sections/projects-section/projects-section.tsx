@@ -3,7 +3,7 @@ import projectsData from "./projects-data";
 
 const Projects = () => {
   return (
-    <div className="mt-24 w-full min-h-[70vh] h-full">
+    <div className="mt-24 w-full h-full">
       <div className="flex flex-col gap-y-2 items-center">
         <h1 className="md:text-3xl text-xl font-bold text-center text-[#E2E9F1] uppercase font-mono">
           <p style={{ letterSpacing: "10px" }}>Projects</p>

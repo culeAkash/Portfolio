@@ -1,12 +1,13 @@
 import SkillIcon from "../skills-icons";
 import { Button } from "../ui/button";
 
-const AboutSection = () => {
+const AboutSection = ({
+  scrollToSection,
+}: {
+  scrollToSection: (section: string) => void;
+}) => {
   return (
-    <div
-      className="mt-20 md:mt-20 w-full min-h-[50vh] h-fit"
-      id="about-section"
-    >
+    <div className="mt-20 md:mt-20 w-full h-fit" id="about-section">
       <div className="flex flex-col gap-y-2 items-center">
         <h1 className="text-xl md:text-3xl font-bold text-center text-[#E2E9F1] uppercase font-mono">
           <p style={{ letterSpacing: "10px" }}>
@@ -58,7 +59,10 @@ const AboutSection = () => {
               me.
             </span>
           </p>
-          <Button className="mt-4 mr-2 transition bg-[#369ea0] h-[50px] w-40  rounded-[10px] hover:bg-[#1d2d5a] group ">
+          <Button
+            className="mt-4 mr-2 transition bg-[#369ea0] h-[50px] w-40  rounded-[10px] hover:bg-[#1d2d5a] group "
+            onClick={() => scrollToSection("contact-section")}
+          >
             <p className="text-[#c8ced7] uppercase group-hover:text-[#369ea0]">
               Contact
             </p>

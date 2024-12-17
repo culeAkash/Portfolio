@@ -8,6 +8,7 @@ import WorkExperience from "./components/sections/work-experience-section";
 import Projects from "./components/sections/projects-section/projects-section";
 import ContactMe from "./components/sections/contact-section";
 import Footer from "./components/sections/footer-section";
+import { useScroll } from "./hooks/use-scroll";
 
 const App = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -44,11 +45,14 @@ const App = () => {
     }
   }, []);
 
-  const heroRef = useRef<HTMLDivElement>(null);
-  const aboutRef = useRef<HTMLDivElement>(null);
-  const workRef = useRef<HTMLDivElement>(null);
-  const projectsRef = useRef<HTMLDivElement>(null);
-  const contactRef = useRef<HTMLDivElement>(null);
+  const {
+    aboutRef,
+    contactRef,
+    heroRef,
+    projectsRef,
+    scrollToSection,
+    workRef,
+  } = useScroll();
 
   if (!containerRef || !glowCursorRef) {
     return (
@@ -58,33 +62,6 @@ const App = () => {
       </div>
     );
   }
-
-  const scrollToSection = (section: string) => {
-    let ref = null;
-    switch (section) {
-      case "home-section":
-        ref = heroRef;
-        break;
-      case "about-section":
-        ref = aboutRef;
-        break;
-      case "work-section":
-        ref = workRef;
-        break;
-      case "projects-section":
-        ref = projectsRef;
-        break;
-      case "contact-section":
-        ref = contactRef;
-        break;
-      default:
-        break;
-    }
-    if (ref) {
-      const targetSection = (ref.current?.offsetTop || 0) - 20;
-      window.scrollTo({ top: targetSection, behavior: "smooth" });
-    }
-  };
 
   return (
     <div className="min-h-screen">
@@ -104,7 +81,7 @@ const App = () => {
             <HeroSection />
           </div>
           <div ref={aboutRef}>
-            <AboutSection />
+            <AboutSection scrollToSection={scrollToSection} />
           </div>
           <div ref={workRef}>
             <WorkExperience />
@@ -115,12 +92,10 @@ const App = () => {
           <div ref={contactRef}>
             <ContactMe />
           </div>
-          <div>
-          </div>
+          <div></div>
         </div>
-        <Footer/>
+        <Footer />
       </div>
-      
     </div>
   );
 };
