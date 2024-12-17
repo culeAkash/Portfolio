@@ -7,6 +7,7 @@ import AboutSection from "./components/sections/about-section";
 import WorkExperience from "./components/sections/work-experience-section";
 import Projects from "./components/sections/projects-section/projects-section";
 import ContactMe from "./components/sections/contact-section";
+import Footer from "./components/sections/footer-section";
 
 const App = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -114,8 +115,12 @@ const App = () => {
           <div ref={contactRef}>
             <ContactMe />
           </div>
+          <div>
+          </div>
         </div>
+        <Footer/>
       </div>
+      
     </div>
   );
 };

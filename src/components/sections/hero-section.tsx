@@ -7,8 +7,8 @@ import "./hero-section.css";
 
 const HeroSection = () => {
   return (
-    <div className="relative h-[90vh]">
-      <div className="w-full flex flex-row justify-center md:justify-between gap-x-8 py-20">
+    <div className="h-fit min-h-[90vh]">
+      <div className="w-full flex flex-row justify-center md:justify-between gap-x-8 pt-20 mb-20">
         <div className="w-full md:w-[55%] flex flex-col gap-y-4">
           <h1 className="text-xl md:text-5xl text-[#E2E9F1] uppercase font-serif">
             Hello, I'm <span className="text-[#369ea0]">Akash Jaiswal</span>
@@ -42,7 +42,7 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-      <div className="hidden md:block absolute left-[50%] translate-x-[-50%] bottom-10 w-5 h-9 rounded-xl bg-transparent border-2 border-[#1d2d5a] ">
+      <div className="hidden md:block w-5 h-9 mx-auto mt-24 relative rounded-xl bg-transparent border-2 border-[#1d2d5a] ">
         <div className="mouse"></div>
       </div>
     </div>
