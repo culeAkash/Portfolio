@@ -1,5 +1,5 @@
 import SkillIcon from "../skills-icons";
-import { Button } from "../ui/button";
+import { motion } from "motion/react";
 
 const AboutSection = ({
   scrollToSection,
@@ -59,19 +59,32 @@ const AboutSection = ({
               me.
             </span>
           </p>
-          <Button
-            className="mt-4 mr-2 transition bg-[#369ea0] h-[50px] w-40  rounded-[10px] hover:bg-[#1d2d5a] group "
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            transition={{ duration: 0.1 }}
+            className="mt-4 mr-4 transition bg-[#369ea0] h-[50px] w-40  rounded-[10px]"
             onClick={() => scrollToSection("contact-section")}
           >
-            <p className="text-[#c8ced7] uppercase group-hover:text-[#369ea0]">
+            <p className="text-[#c8ced7] uppercase group-hover:text-[#369ea0] text-sm font-medium">
               Contact
             </p>
-          </Button>
-          <Button className="mt-4 transition bg-[#369ea0] h-[50px] w-40  rounded-[10px] hover:bg-[#1d2d5a] group ">
+          </motion.button>
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            transition={{ duration: 0.1 }}
+            className="mt-4 transition bg-[#369ea0] h-[50px] w-40  rounded-[10px] text-sm "
+            onClick={() =>
+              window.open(
+                "https://drive.google.com/uc?export=download&id=1ulSM8w7A79b8YX0s51zkuCdRQr-2euux"
+              )
+            }
+          >
             <p className="text-[#c8ced7] uppercase group-hover:text-[#369ea0]">
               Download CV
             </p>
-          </Button>
+          </motion.button>
         </div>
         <div className="w-full md:w-1/2 space-y-4 md:ml-10">
           <div className="font-bold text-2xl text-[#E2E9F1]">My Skills</div>

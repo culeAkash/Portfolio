@@ -1,4 +1,4 @@
-import profileImg from "../assets/90236346.jpeg";
+import profileImg from "../assets/navbar-profile.jpeg";
 
 interface NavbarProps {
   scrollFunc: (section: string) => void;
@@ -7,11 +7,14 @@ interface NavbarProps {
 const Navbar = ({ scrollFunc }: NavbarProps) => {
   return (
     <div className="w-full h-full bg-[#0E1734] flex flex-row justify-center md:justify-between items-center px-6">
-      <div className="flex flex-row gap-x-2 justify-center items-center">
-        <div className="h-10 w-10 rounded-lg bg-zinc-200">
-          <img src={profileImg} className="w-10 h-10" />
+      <div
+        className="flex flex-row gap-x-2 justify-center items-center group cursor-pointer"
+        onClick={() => scrollFunc("home-section")}
+      >
+        <div className="h-10 w-10 rounded-full bg-zinc-200">
+          <img src={profileImg} className="w-10 h-10 rounded-full" />
         </div>
-        <h1 className="text-xl text-zinc-200 font-serif uppercase">
+        <h1 className="text-xl text-zinc-200 font-serif uppercase group-hover:text-[#369ea0] ml-1">
           Akash Jaiswal
         </h1>
       </div>

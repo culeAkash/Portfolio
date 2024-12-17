@@ -9,10 +9,10 @@ interface SocialLinkInterface {
 const SocialLink = ({ href, icon }: SocialLinkInterface) => {
   return (
     <div
-      className="h-20 w-20 border-2 border-[#1d2d5a] flex items-center justify-center cursor-pointer"
+      className=" flex items-center justify-center cursor-pointer hover:bg-[#13293A] px-2 py-3 rounded-[5px]"
       onClick={() => window.open(href)}
     >
-      <img src={icon} className="w-2/3" />
+      <img src={icon} className="w-8 h-8" />
     </div>
   );
 };

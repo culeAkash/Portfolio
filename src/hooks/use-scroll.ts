@@ -1,6 +1,6 @@
 import { useRef } from "react";
 
-export const useScroll = () => {
+export const useMouseScroll = () => {
   const heroRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
   const workRef = useRef<HTMLDivElement>(null);
