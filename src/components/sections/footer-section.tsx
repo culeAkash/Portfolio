@@ -1,4 +1,4 @@
-import { Copyright, GithubIcon, Linkedin, LinkedinIcon, Mail, TwitterIcon, YoutubeIcon } from "lucide-react"
+import { Copyright, GithubIcon, Linkedin, Mail, TwitterIcon, YoutubeIcon } from "lucide-react"
 
 const Footer = () => {
     const iconClass = "h-8 w-8 hover:text-[#E2E9F1] cursor-pointer"
