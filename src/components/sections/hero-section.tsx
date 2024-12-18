@@ -6,11 +6,11 @@ const HeroSection = () => {
     <>
       <div className="h-fit px-14 md:px-28">
         <div className="w-full flex flex-row justify-center md:justify-between gap-x-8 pt-20 mb-20">
-          <div className="w-full lg:w-[55%] flex flex-col gap-y-4 justify-center items-center md:items-start text-pretty">
-            <h1 className="text-2xl md:text-3xl lg:text-4xl text-[#E2E9F1] uppercase font-serif">
+          <div className="w-full lg:w-[55%] flex flex-col gap-y-4 items-start justify-start text-pretty">
+            <h1 className="text-xl md:text-2xl lg:text-3xl text-[#E2E9F1] uppercase font-serif">
               Hello, I'm <span className="text-[#369ea0]">Akash Jaiswal</span>
             </h1>
-            <h1 className="text-md md:text-2xl text-[#E2E9F1] uppercase font-serif">
+            <h1 className="text-md md:text-xl text-[#E2E9F1] uppercase font-serif">
               <span className="text-[#369ea0]">Full Stack Developer </span>
             </h1>
             <p className="text-[#94A3B8] text-sm md:text-base ">
