@@ -2,7 +2,7 @@ import SkillIcon from "../skills-icons";
 
 const WorkExperience = () => {
   return (
-    <div className="mt-24 w-full h-fit">
+    <div className="mt-24 w-full h-fit px-14 md:px-28">
       <div className="flex flex-col gap-y-2 items-center">
         <h1 className="md:text-3xl text-xl font-bold text-center text-[#E2E9F1] uppercase font-mono">
           <p style={{ letterSpacing: "10px" }}>

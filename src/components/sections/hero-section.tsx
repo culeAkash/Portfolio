@@ -4,9 +4,9 @@ import Spline from "@splinetool/react-spline";
 const HeroSection = () => {
   return (
     <>
-      <div className="h-fit">
+      <div className="h-fit px-14 md:px-28">
         <div className="w-full flex flex-row justify-center md:justify-between gap-x-8 pt-20 mb-20">
-          <div className="w-full lg:w-[55%] flex flex-col gap-y-4 justify-center">
+          <div className="w-full lg:w-[55%] flex flex-col gap-y-4 justify-center items-center md:items-start text-pretty">
             <h1 className="text-2xl md:text-3xl lg:text-4xl text-[#E2E9F1] uppercase font-serif">
               Hello, I'm <span className="text-[#369ea0]">Akash Jaiswal</span>
             </h1>
@@ -36,17 +36,20 @@ const HeroSection = () => {
 
 const SplineWrapper = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const onLoad = (spline: any) => {
-    spline.setZoom(0.15);
+  const onLoadLarge = (spline: any) => {
+    spline.setZoom(0.125);
   };
+
   return (
-    <div className="w-[45%] lg:block hidden">
-      <Spline
-        style={{ width: "100%", height: "50vh" }}
-        scene="https://prod.spline.design/eBmBJml4RBNpNr2z/scene.splinecode"
-        onLoad={onLoad}
-      />
-    </div>
+    <>
+      <div className="w-[45%] lg:block hidden">
+        <Spline
+          style={{ width: "100%", height: "50vh" }}
+          scene="https://prod.spline.design/eBmBJml4RBNpNr2z/scene.splinecode"
+          onLoad={onLoadLarge}
+        />
+      </div>
+    </>
   );
 };
 export default HeroSection;

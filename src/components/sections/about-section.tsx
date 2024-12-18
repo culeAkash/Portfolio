@@ -7,7 +7,10 @@ const AboutSection = ({
   scrollToSection: (section: string) => void;
 }) => {
   return (
-    <div className="mt-20 md:mt-20 w-full h-fit" id="about-section">
+    <div
+      className="mt-20 md:mt-20 w-full h-fit px-14 md:px-28"
+      id="about-section"
+    >
       <div className="flex flex-col gap-y-2 items-center">
         <h1 className="text-xl md:text-3xl font-bold text-center text-[#E2E9F1] uppercase font-mono">
           <p style={{ letterSpacing: "10px" }}>
@@ -16,7 +19,7 @@ const AboutSection = ({
         </h1>
 
         <div className="w-10 h-[3px] bg-[#1d2d5a] mt-4" />
-        <p className="text-[#94A3B8] text-center text-md w-full md:w-2/3 mt-5">
+        <p className="text-[#94A3B8] text-center text-md w-full md:w-2/3 mt-5 text-pretty">
           Here, you will find more information about me, what I do, and my
           current skills mostly in terms of programming and tecnology.
         </p>
@@ -25,7 +28,7 @@ const AboutSection = ({
         <div className="w-full md:w-1/2 space-y-4">
           <h1 className="font-bold text-2xl text-[#E2E9F1]">Get to know me!</h1>
           <p
-            className="text-[#94A3B8] text-md font-sans"
+            className="text-[#94A3B8] text-md font-sans text-wrap"
             style={{ lineHeight: "2" }}
           >
             I'm a <span className="text-[#369ea0]">Software Engineer</span> with

@@ -93,29 +93,29 @@ const App = () => {
           whileInView={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 3 }}
-          className="px-14 md:px-28 relative"
+          className=" relative"
         >
-          <div className="absolute left-0 top-[8%] -translate-y-1/2 h-fit w-fit bg-[#0E1734] rounded-[5px] shadow-2xl p-2 hidden md:block">
-            <div className="flex flex-col gap-y-4 justify-center items-center">
-              <SocialLink
-                href="https://github.com/culeAkash"
-                icon={githubIcon}
-              />
-              <SocialLink
-                href="https://x.com/space_monkey_05"
-                icon={twitterIcon}
-              />
-              <SocialLink
-                href="https://www.linkedin.com/in/akash-jaiswal-704b48212/"
-                icon={linkedinIcon}
-              />
-              <SocialLink
-                href="mailto:akashjaiswal3120@gmail.com"
-                icon={emailIcons}
-              />
+          <div ref={heroRef} className="relative">
+            <div className="absolute left-0 top-[50%] -translate-y-1/2 h-fit w-fit bg-[#0E1734] rounded-[5px] shadow-2xl p-2 hidden md:block socials">
+              <div className="flex flex-col gap-y-4 justify-center items-center">
+                <SocialLink
+                  href="https://github.com/culeAkash"
+                  icon={githubIcon}
+                />
+                <SocialLink
+                  href="https://x.com/space_monkey_05"
+                  icon={twitterIcon}
+                />
+                <SocialLink
+                  href="https://www.linkedin.com/in/akash-jaiswal-704b48212/"
+                  icon={linkedinIcon}
+                />
+                <SocialLink
+                  href="mailto:akashjaiswal3120@gmail.com"
+                  icon={emailIcons}
+                />
+              </div>
             </div>
-          </div>
-          <div ref={heroRef}>
             <HeroSection />
           </div>
           <div ref={aboutRef} className="hidden-container">
@@ -124,14 +124,16 @@ const App = () => {
           <div ref={workRef} className="hidden-container">
             <WorkExperience />
           </div>
-          <div ref={projectsRef} className="hidden-container">
+          <div ref={projectsRef} className="hidden-container px-14 md:px-28">
             <Projects />
           </div>
-          <div ref={contactRef} className="hidden-container">
+          <div ref={contactRef} className="hidden-container px-14 md:px-28">
             <ContactMe />
           </div>
         </motion.div>
-        <Footer />
+        <div className="footer">
+          <Footer />
+        </div>
       </div>
     </div>
   );
