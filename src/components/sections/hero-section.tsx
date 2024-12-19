@@ -6,14 +6,14 @@ const HeroSection = () => {
     <>
       <div className="h-fit px-14 md:px-28">
         <div className="w-full flex flex-row justify-center md:justify-between gap-x-8 pt-20 mb-20">
-          <div className="w-full lg:w-[55%] flex flex-col gap-y-4 items-start justify-start text-pretty">
-            <h1 className="text-xl md:text-2xl lg:text-3xl text-[#E2E9F1] uppercase font-serif">
+          <div className="w-full lg:w-[55%] flex flex-col gap-y-4  items-center lg:items-start justify-center text-pretty">
+            <h1 className="text-2xl md:text-3xl lg:text-4xl text-[#E2E9F1] uppercase font-serif md:text-start text-center text-balance">
               Hello, I'm <span className="text-[#369ea0]">Akash Jaiswal</span>
             </h1>
-            <h1 className="text-md md:text-xl text-[#E2E9F1] uppercase font-serif">
+            <h1 className="text-lg md:text-2xl text-[#E2E9F1] uppercase text-center font-serif">
               <span className="text-[#369ea0]">Full Stack Developer </span>
             </h1>
-            <p className="text-[#94A3B8] text-sm md:text-base ">
+            <p className="text-[#94A3B8] text-sm md:text-base text-justify">
               Hi, I'm Akash, a Software Engineer with 2+ years of experience in
               backend development using Java, Node.js, and Spring Boot, and
               frontend expertise in React and Next.js. I specialize in designing
@@ -26,7 +26,7 @@ const HeroSection = () => {
           </div>
           <SplineWrapper />
         </div>
-        <div className="hidden md:block w-5 h-9 mx-auto mt-32 lg:mt-40 relative rounded-xl bg-transparent border-2 border-[#1d2d5a] ">
+        <div className="hidden md:block w-5 h-9 mx-auto mt-10 md:mt-32 lg:mt-40 relative rounded-xl bg-transparent border-2 border-[#1d2d5a] ">
           <div className="mouse"></div>
         </div>
       </div>

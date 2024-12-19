@@ -41,11 +41,11 @@ const Project = ({
           ))}
 
           <GithubIcon
-            className="h-6 w-6 my-2 text-[#369ea0] hover:text-[#f1f1f2] cursor-pointer hidden group-hover:block"
+            className="h-6 w-6 my-2 text-[#369ea0] hover:text-[#f1f1f2] cursor-pointer block lg:hidden lg:group-hover:block "
             onClick={() => window.open(githubLink, "_blank")}
           />
           <Link
-            className="h-6 w-6 my-2 text-[#369ea0] hover:text-[#f1f1f2] cursor-pointer hidden group-hover:block"
+            className="h-6 w-6 my-2 text-[#369ea0] hover:text-[#f1f1f2] cursor-pointer block lg:hidden lg:group-hover:block"
             onClick={() => window.open(appLink, "_blank")}
           />
         </div>

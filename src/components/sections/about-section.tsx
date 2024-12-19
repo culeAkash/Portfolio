@@ -28,7 +28,7 @@ const AboutSection = ({
         <div className="w-full md:w-1/2 space-y-4">
           <h1 className="font-bold text-2xl text-[#E2E9F1]">Get to know me!</h1>
           <p
-            className="text-[#94A3B8] text-md font-sans text-wrap"
+            className="text-[#94A3B8] text-md font-sans text-justify"
             style={{ lineHeight: "2" }}
           >
             I'm a <span className="text-[#369ea0]">Software Engineer</span> with
@@ -66,7 +66,7 @@ const AboutSection = ({
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             transition={{ duration: 0.1 }}
-            className="mt-4 mr-4 transition bg-[#369ea0] h-[50px] w-40  rounded-[10px]"
+            className="mt-4 mr-4 transition bg-[#369ea0] h-[50px] w-full md:w-40  rounded-[10px]"
             onClick={() => scrollToSection("contact-section")}
           >
             <p className="text-[#c8ced7] uppercase group-hover:text-[#369ea0] text-sm font-medium">
@@ -77,7 +77,7 @@ const AboutSection = ({
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             transition={{ duration: 0.1 }}
-            className="mt-4 transition bg-[#369ea0] h-[50px] w-40  rounded-[10px] text-sm "
+            className="mt-4 transition bg-[#369ea0] h-[50px] w-full md:w-40  rounded-[10px] text-sm "
             onClick={() =>
               window.open(
                 "https://drive.google.com/uc?export=download&id=1ulSM8w7A79b8YX0s51zkuCdRQr-2euux"
