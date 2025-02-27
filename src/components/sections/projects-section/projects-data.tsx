@@ -65,7 +65,7 @@ const projectsData: ProjectProps[] = [
   },
   {
     id: 2,
-    appLink: "https://discord-clone-5lwn.vercel.app/",
+    appLink: "https://discord-clone-production-d1f2.up.railway.app/",
     imgSrc: discordImg,
     imgAlt: "discordImg",
     title: (
